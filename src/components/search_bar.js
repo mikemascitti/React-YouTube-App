@@ -18,6 +18,8 @@ class  SearchBar extends Component{
 
     <div className="search-bar" >
 
+    
+
       <input type="text" id='searchBarInput'
 
         //onChange={inputBoxData => this.setState({term : inputBoxData.target.value} ) }  //updating state causes re-render and the click doesn't work.
