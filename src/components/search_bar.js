@@ -17,9 +17,6 @@ class  SearchBar extends Component{
     return (
 
     <div className="search-bar" >
-
-    
-
       <input type="text" id='searchBarInput'
 
         //onChange={inputBoxData => this.setState({term : inputBoxData.target.value} ) }  //updating state causes re-render and the click doesn't work.
@@ -29,10 +26,12 @@ class  SearchBar extends Component{
         //onChange={ this.handleInputChange }
       />
       <input type="button"
+        //onClick={this.props.onSearchTermChange(this.state.term)}
         onClick={ () => this.handleClick() }
       />
 
   </div>
+
 
   //onClick={this.state.term => this.props.onSearchTermChange(userInputValue.target.value)}
     //return <input onChange={event => console.log(event.target.value)}/>;
@@ -41,14 +40,14 @@ class  SearchBar extends Component{
   }
 
   handleClick() {
-    console.log(this.state.term);
+    //console.log(this.state.term);
     this.props.onSearchTermChange(this.state.term);
   }
 
 //This below was the original example - line 20 above called this function, which set the state and then called the props.onSearchTermChange
   handleInputChange(termParam){
     this.setState({term: termParam});
-    console.log(this.state.term);
+    //console.log(this.state.term);
     //this.setState({term});  //can use this only if the param input is 'term'
     //this.props.onSearchTermChange(termParam);
 

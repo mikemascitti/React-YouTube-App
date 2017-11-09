@@ -24,6 +24,7 @@ class App extends Component {
 		this.videoSearch('LG G6');
 	}
 
+
 	videoSearch(inputTerm) {
 		YTSearch({key: API_KEY, term: inputTerm}, (videos) => {
 			this.setState({   //setState causes a re-render
