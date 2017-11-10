@@ -21,7 +21,7 @@ class App extends Component {
 			selectedVideo: null,
 			searchTerm: ''
 		};
-		this.videoSearch('LG G6');
+		this.videoSearch('Pokemon');
 	}
 
 
